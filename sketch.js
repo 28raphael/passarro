@@ -8,7 +8,7 @@ var porco1,porco2;
 var tronco1,tronco2,tronco3,tronco4;
 var passaro;
 var fundo;
-
+var plataforma;
 
 function preload(){
   fundo = loadImage("sprites/bg.png");
@@ -21,6 +21,7 @@ function setup() {
   engine = Engine.create();
   world = engine.world;
 
+  plataforma = new Chao(150,305,300,180);
   chao = new Chao(600,400,1200,100);
   caixa1 = new Caixa(700,320,70,70);
   caixa2 = new Caixa(920,320,70,70);
@@ -60,4 +61,5 @@ function draw() {
   tronco4.display();
 
   passaro.display();
+  plataforma.display();
 }
